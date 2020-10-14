@@ -1,12 +1,42 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { BackHandler } from "react-native";
+import { useFocusEffect } from "@react-navigation/native";
+import { WebView } from "react-native-webview";
+import { RECLAMOS_URL } from "../utils/constants";
 
 const Reclamos = () => {
+  const [canWebViewGoBack, setCanWebViewGoBack] = React.useState(false);
+  const webView = React.useRef(null);
+
+  const handleNavigationStateChange = React.useCallback((navState) => {
+    setCanWebViewGoBack(navState.canGoBack);
+  }, []);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      const onBackPress = () => {
+        if (canWebViewGoBack) {
+          webView.current.goBack();
+          return true;
+        } else {
+          return false;
+        }
+      };
+
+      BackHandler.addEventListener("hardwareBackPress", onBackPress);
+
+      return () =>
+        BackHandler.removeEventListener("hardwareBackPress", onBackPress);
+    }, [canWebViewGoBack])
+  );
+
+
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Reclamos Screen</Text>
-      <Button title="Go to Home" onPress={() => navigation.navigate("Home")} />
-    </View>
+    <WebView
+      ref={webView}
+      source={{ uri: RECLAMOS_URL }}
+      onNavigationStateChange={handleNavigationStateChange}
+    />
   );
 };
 

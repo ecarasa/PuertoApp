@@ -31,7 +31,7 @@ export const screens = [
   { component: Home, title: "¡Hola!", routeName: routes.HOME },
   { component: Navegacion, title: "Navegación", routeName: routes.NAVEGACION },
   { component: Reclamos, title: "Reclamos", routeName: routes.RECLAMOS },
-  { component: Twitter, title: "Twitter", routeName: routes.TWITTER },
+  { component: Twitter, title: "@PuertoBsAs", routeName: routes.TWITTER },
 ];
 
 const MainStack = () => {

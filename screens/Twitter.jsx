@@ -1,12 +1,23 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { Linking } from "react-native";
+import { WebView } from "react-native-webview";
+import WebViewLoading from "../components/WebViewLoading";
+import { TWITTER_FEED_URL } from "../utils/constants";
 
 const Twitter = () => {
+  const handleShouldStartLoadWithRequest = (request) => {
+    Linking.openURL(request.url);
+    return false;
+  };
+
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Twitter Screen</Text>
-      <Button title="Go to Home" onPress={() => navigation.navigate("Home")} />
-    </View>
+    <WebView
+      source={{ uri: TWITTER_FEED_URL }}
+      scalesPageToFit={false}
+      onShouldStartLoadWithRequest={handleShouldStartLoadWithRequest}
+      startInLoadingState={true}
+      renderLoading={() => <WebViewLoading />}
+    />
   );
 };
 

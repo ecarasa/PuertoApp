@@ -1,7 +1,6 @@
 import React from "react";
 import { Linking } from "react-native";
-import { WebView } from "react-native-webview";
-import WebViewLoading from "../components/WebViewLoading";
+import WebViewWithLoading from "../components/WebViewWithLoading";
 import { TWITTER_FEED_URL } from "../utils/constants";
 
 const Twitter = () => {
@@ -11,12 +10,10 @@ const Twitter = () => {
   };
 
   return (
-    <WebView
+    <WebViewWithLoading
       source={{ uri: TWITTER_FEED_URL }}
-      scalesPageToFit={false}
       onShouldStartLoadWithRequest={handleShouldStartLoadWithRequest}
-      startInLoadingState={true}
-      renderLoading={() => <WebViewLoading />}
+      scalesPageToFit={false}
     />
   );
 };

@@ -1,9 +1,8 @@
 import React from "react";
 import { BackHandler } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
-import { WebView } from "react-native-webview";
 import { RECLAMOS_URL } from "../utils/constants";
-import WebViewLoading from "../components/WebViewLoading";
+import WebViewWithLoading from "../components/WebViewWithLoading";
 
 const Reclamos = () => {
   const [canWebViewGoBack, setCanWebViewGoBack] = React.useState(false);
@@ -33,12 +32,10 @@ const Reclamos = () => {
 
 
   return (
-    <WebView
+    <WebViewWithLoading
       ref={webView}
       source={{ uri: RECLAMOS_URL }}
       onNavigationStateChange={handleNavigationStateChange}
-      startInLoadingState={true}
-      renderLoading={() => <WebViewLoading />}
     />
   );
 };

@@ -1,5 +1,8 @@
 import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import {
+  createStackNavigator,
+  CardStyleInterpolators,
+} from "@react-navigation/stack";
 
 // Screens
 import Buques from "../screens/Buques";
@@ -12,6 +15,7 @@ import Reclamos from "../screens/Reclamos";
 import Twitter from "../screens/Twitter";
 
 import routes from "./routes";
+import WithBuenosAiresFooter from "../components/WithBuenosAiresFooter";
 
 const Stack = createStackNavigator();
 
@@ -36,16 +40,25 @@ export const screens = [
 
 const MainStack = () => {
   return (
-    <Stack.Navigator initialRouteName={routes.HOME}>
-      {screens.map(({ component, title, routeName }) => (
-        <Stack.Screen
-          name={routeName}
-          component={component}
-          options={{ title }}
-          key={title}
-        />
-      ))}
-    </Stack.Navigator>
+    <WithBuenosAiresFooter>
+      <Stack.Navigator
+        initialRouteName={routes.HOME}
+        screenOptions={{
+          cardStyle: { backgroundColor: 'white' },
+          cardStyleInterpolator:
+            CardStyleInterpolators.forHorizontalIOS,
+        }}
+      >
+        {screens.map(({ component, title, routeName }) => (
+          <Stack.Screen
+            name={routeName}
+            component={component}
+            options={{ title }}
+            key={title}
+          />
+        ))}
+      </Stack.Navigator>
+    </WithBuenosAiresFooter>
   );
 };
 

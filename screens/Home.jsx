@@ -73,12 +73,6 @@ const Home = ({ navigation }) => {
           <Text>Capturar credencial</Text>
         </View>
       </View>
-      <View style={styles.footerContainer}>
-        <Image
-          source={require("../assets/img/logos.png")}
-          style={styles.logoStyle}
-        />
-      </View>
     </View>
   );
 };
@@ -86,7 +80,6 @@ const Home = ({ navigation }) => {
 const styles = StyleSheet.create({
   homeContainer: {
     flex: 1,
-    backgroundColor: "white",
   },
   listItemContainer: {
     padding: "3%",
@@ -99,15 +92,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-  },
-  footerContainer: {
-    flex: 1,
-    justifyContent: "flex-end",
-  },
-  logoStyle: {
-    width: "100%",
-    height: "50%",
-    resizeMode: "contain",
   },
 });
 

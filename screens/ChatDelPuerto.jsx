@@ -1,13 +1,10 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import WebViewWithLoading from "../components/WebViewWithLoading";
+import { CHAT_URL } from "../utils/constants";
+
 
 const ChatDelPuerto = () => {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>ChatDelPuerto Screen</Text>
-      <Button title="Go to Home" onPress={() => navigation.navigate("Home")} />
-    </View>
-  );
+  return <WebViewWithLoading source={{ uri: CHAT_URL }} />;
 };
 
 export default ChatDelPuerto;

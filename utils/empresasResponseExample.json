@@ -1,0 +1,522 @@
+{
+  "empresas": [
+    {
+      "id": "1",
+      "empresa": "ANJOR S.A.",
+      "direccion_tel": "",
+      "rubro": "PROVISION DE COMBUSTIBLE",
+      "expediente": "EX-2018-11224441-APN-MEG#AGP"
+    },
+    {
+      "id": "2",
+      "empresa": "PABLO FERNANDEZ (NAVAL SUR)",
+      "direccion_tel": "",
+      "rubro": "REPARACIONES NAVALES EN  GENERAL",
+      "expediente": "EX-2018-47680093-APN-MEG#AGP"
+    },
+    {
+      "id": "3",
+      "empresa": "ESCALUM INVESTMENT S.A.",
+      "direccion_tel": "",
+      "rubro": "ALQUILER DE MAQUINARIA Y EQUIPO N.C.P.",
+      "expediente": "EX-2019-15410259-APN-MEG#AGP"
+    },
+    {
+      "id": "4",
+      "empresa": "MATTINA HNOS. S.A.C.I.A. ",
+      "direccion_tel": "GREGORIO ARAOZ DE LAMADRID 434 C.A.B.A. (C1166AAH) TEL: 4-303-2293",
+      "rubro": "PROVISI\u00d3N MAR\u00cdTIMA GENERAL A BUQUES DE COMESTIBLES",
+      "expediente": "EX-2019-38591270-APN-MEG#AGP"
+    },
+    {
+      "id": "5",
+      "empresa": "SANCHEZ EDUARDO ARIEL (TECNIMOTORS) ",
+      "direccion_tel": "EVA PERON 1563 HURLINGHAM PCIA BS.AS. TEL: 5-437-5797",
+      "rubro": "REPARACI\u00d3N Y MANTENIMIENTO DE MAQUINAS Y EQUIPOS.",
+      "expediente": "EX-2019-35954263-APN-MEG#AGP"
+    },
+    {
+      "id": "6",
+      "empresa": "WINTER SERVICE S.A. ",
+      "direccion_tel": "VIAMONTE 494 PISO 9 (C1053ABJ) TEL: 4-311-2589 ",
+      "rubro": "CONTROL DE CARGAS Y DESCARGAS",
+      "expediente": "EX-2019-21535471-APN-MEG#AGP"
+    },
+    {
+      "id": "7",
+      "empresa": "LOGINTER S.A. ",
+      "direccion_tel": "AV. RAMONS. CASTILLO S/N ENTRE CALLE 8 Y 9 C.A.B.A. (C1104AMU787) TEL: 4-114-3200",
+      "rubro": "CONTENEDORES Y CARGA GENERAL",
+      "expediente": "EX-2019-17546433-APN-MEG#AGP"
+    },
+    {
+      "id": "8",
+      "empresa": "MARSEP S.R.L.",
+      "direccion_tel": "MANUEL FRAGA 1617 C.A.B.A. COD. POSTAL 1427 TELEFONO 45521761",
+      "rubro": "TALLERES NAVALES",
+      "expediente": "EX-2019-42802862-APN-MEG#AGP"
+    },
+    {
+      "id": "9",
+      "empresa": "ALEJANDRO FERNANDEZ",
+      "direccion_tel": "",
+      "rubro": "CONTENEDORES Y CARGA GENERAL",
+      "expediente": "EX-2019-41639471-APN-MEG#AGP"
+    },
+    {
+      "id": "10",
+      "empresa": "TRANSPORTES PUERTO NUEVO S.R.L.",
+      "direccion_tel": "",
+      "rubro": "COMBUSTIBLES",
+      "expediente": "EX-2019-17352668-APN-MEG#AGP"
+    },
+    {
+      "id": "11",
+      "empresa": "DISTRIBUIDORA DE HIDROCARBUROS S.A.",
+      "direccion_tel": "",
+      "rubro": "REPARACIONES NAVALES",
+      "expediente": "EX-2019-16985263-APN-MEG#AGP"
+    },
+    {
+      "id": "12",
+      "empresa": "SOLUCIONES AMBIENTALES S.A. ",
+      "direccion_tel": "RODRIGUEZ PE\u00d1A 947 PISO 1\u00b0 -CASTELAR (B1712JQF) PCIA. BS.AS. TEL: 4-629-9038",
+      "rubro": "TRANSPORTE DE RESIDUOS PELIGROSOS L\u00cdQUIDOS Y S\u00d3LIDOS",
+      "expediente": "EX-2018-62867996-APN-MEG#AGP"
+    },
+    {
+      "id": "13",
+      "empresa": "GUILLERMO DOMIN S.R.L ",
+      "direccion_tel": "COLOMBRES 2353 MUNRO (1605) TEL: 4-721-0077",
+      "rubro": "PROVISI\u00d3N DE ELEMENTOS PARA LA SEGURIDAD HUMANA",
+      "expediente": "EX-2019-17543475-APN-MEG#AGP"
+    },
+    {
+      "id": "14",
+      "empresa": "DEPIETRI TRANSPORTE S.R.L. ",
+      "direccion_tel": "AV. MONTES DE OCA N\u00b0 1434 PISO 7\u00b0 A C.A.B.A. TEL: 4-218-4865",
+      "rubro": "PROVISI\u00d3N DE COMBUSTIBLES A BUQUE",
+      "expediente": "EX-2019-01579613-APN-MEG#AGP"
+    },
+    {
+      "id": "15",
+      "empresa": "SOUTHERN GATE S.A. ",
+      "direccion_tel": "DEFENSA 154 AVELLANEDA DOC SUD PCIA.BS.AS. (1871) TEL: 4-301-8162",
+      "rubro": "AMARRE Y DESAMARRE DE EMBARCACIONES",
+      "expediente": "EX-2019-45213112-APN-MEG#AGP"
+    },
+    {
+      "id": "16",
+      "empresa": "DEFIBA DEPOSITO FISCAL PUERTO SUR",
+      "direccion_tel": "",
+      "rubro": "CONTENEDORES Y CARGA GENERAL",
+      "expediente": "EX-2019-35933803-APN-MEG#AGP"
+    },
+    {
+      "id": "17",
+      "empresa": "PETRO DIS S.A.C.I.F.",
+      "direccion_tel": "",
+      "rubro": "PROVISION DE COMBUSTIBLE",
+      "expediente": "EX-2019-49445378-APN-MEG#AGP"
+    },
+    {
+      "id": "18",
+      "empresa": "DELTABLUE LANCHAS S.R.L.",
+      "direccion_tel": "",
+      "rubro": "AMARRADORES",
+      "expediente": "EX-2019-46104230-APN-MEG#AGP"
+    },
+    {
+      "id": "19",
+      "empresa": "TRANSLOGHAR S.R.L. ",
+      "direccion_tel": "",
+      "rubro": "PROVISION DE COMBUSTIBLE",
+      "expediente": "EX-2019-51650057-APN-MEG#AGP"
+    },
+    {
+      "id": "20",
+      "empresa": "NOVALES MIGUEL ANGEL",
+      "direccion_tel": "",
+      "rubro": "PROVISION DE COMBUSTIBLE",
+      "expediente": "EX-2019-52027419-APN-MEG#AGP"
+    },
+    {
+      "id": "21",
+      "empresa": "PROIOS S.A.",
+      "direccion_tel": "",
+      "rubro": "TALLER NAVAL",
+      "expediente": "EX-2019-53948670-APN-MEG#AGP"
+    },
+    {
+      "id": "22",
+      "empresa": "PEDRO DANIEL ALTAMIRANDA (ALTAMAR) ",
+      "direccion_tel": "PORTELA 766 C.A.B.A. (1406) TEL: 4-612-4532",
+      "rubro": "TALLER NAVAL",
+      "expediente": "EX -2019-38226033-APN-MEG#AGP"
+    },
+    {
+      "id": "23",
+      "empresa": "EMPRESA DE COMBUSTIBLE ZONA COMUN S.A. ",
+      "direccion_tel": "VENEZUELA 110 PISO 1\u00b0 OFIC 14 C.A.B.A. TEL: 4-331-1815 ",
+      "rubro": "PROVISI\u00d3N DE COMBUSTIBLE A BUQUES",
+      "expediente": "EX-2019-51767272-APN-MEG#AGP"
+    },
+    {
+      "id": "24",
+      "empresa": "SPADARI S.R.L. ",
+      "direccion_tel": "",
+      "rubro": "AMARRE Y DESAMARRE DE BUQUES Y RECOLECCION DE RESIDUOS ORGANICOS ( DE TIPO DOMICILIARIO)",
+      "expediente": "EX-2019-51142441-APN-MEG#AGP"
+    },
+    {
+      "id": "25",
+      "empresa": "JORGE ALBERTO CASO S.A.",
+      "direccion_tel": "URUGUAY 2401 SAN PEDRO PCIA BS.AS. TEL: 03329-421924",
+      "rubro": "DISTRIBUCION DE COMBUSTIBLES Y LUBRICANTES",
+      "expediente": "EX-2019-45990528-APN-MEG#AGP"
+    },
+    {
+      "id": "26",
+      "empresa": "NAUTIQ SERVICE S.A. ",
+      "direccion_tel": "BRASIL 73 C.A.B.A. TEL: 4-307-7020",
+      "rubro": "PROVISI\u00d3N Y MANTENIMIENTO DE ELEMENTOS PARA LA SEGURIDAD DE LA VIDA HUMANA EN EL MAR, LUCHA CONTRA INCENDIO Y REPARACI\u00d3N A BORDO",
+      "expediente": "EX-2019-36685544-APN-MEG#AGP"
+    },
+    {
+      "id": "27",
+      "empresa": "CLEAN SEA S.A. ",
+      "direccion_tel": " TUCAN 1669 (1648)",
+      "rubro": "PREVENCION Y CONTROL DE DERRAMES",
+      "expediente": "EX-2018-68038668-APN-MEG#AGP"
+    },
+    {
+      "id": "28",
+      "empresa": "TRANSPORTE SERVIQUIM S.R.L.",
+      "direccion_tel": "",
+      "rubro": "TRANSPORTISTA DE AGUA PARA NO CONSUMO HUMANO",
+      "expediente": "EX-2019-55976439-APN-MEG#AGP"
+    },
+    {
+      "id": "29",
+      "empresa": "NAVAL MARTINS ",
+      "direccion_tel": "",
+      "rubro": "TALLER NAVAL",
+      "expediente": "EX-2019-55482711-APN-MEG#AGP"
+    },
+    {
+      "id": "30",
+      "empresa": "PROIOS SALVAGE S.A. ",
+      "direccion_tel": "WENSESLAO VILLAFA\u00d1E 31 C.A.B.A. (1160) TEL: 4-301-3919",
+      "rubro": "TALLER NAVAL",
+      "expediente": "EX-2018-67144589-APN-MEG#AGP"
+    },
+    {
+      "id": "31",
+      "empresa": "SALUCLA NEGOCIOS UNIPERSONAL",
+      "direccion_tel": "",
+      "rubro": "PROVISION DE ALIMENTOS, AGUA U OTROS INSUMOS",
+      "expediente": "EX-2019-51056981-APN-MEG#AGP"
+    },
+    {
+      "id": "32",
+      "empresa": "TEECNAVIN S.R.L.",
+      "direccion_tel": "",
+      "rubro": "TALLER NAVAL",
+      "expediente": "EX-2019-50631329-APN-MEG#AGP"
+    },
+    {
+      "id": "33",
+      "empresa": "DOMPRA S.R.L. ",
+      "direccion_tel": "PTE. LUIS SAENZ PE\u00d1A 1678 (1135) C.A.B.A. TEL: 4-304-9371",
+      "rubro": "CONTENEDORES Y CARGA GENERAL",
+      "expediente": "EX-2019-62432437-APN-MEG#AGP"
+    },
+    {
+      "id": "34",
+      "empresa": "ESPOSITO JUAN MARCELO ",
+      "direccion_tel": "",
+      "rubro": "INGENIERIA NAVAL",
+      "expediente": "EX-2019-45974402-APN-MEG#AGP"
+    },
+    {
+      "id": "35",
+      "empresa": "SIGNAL S.A.",
+      "direccion_tel": "",
+      "rubro": "TALLER NAVAL",
+      "expediente": "EX-2019-12504721-APN-MEG#AGP"
+    },
+    {
+      "id": "36",
+      "empresa": "POWER MARINE S.R.L. ",
+      "direccion_tel": "AV. BELGRANO 624 PISO 4\u00b0 C.A.B.A. (C1092AAT) TEL: 4-343-7776",
+      "rubro": "DISTRIBUIDORA DE COMBUSTIBLES Y LUBRICANTES MARINOS",
+      "expediente": "   EX-2019-00099622-APN-MEG#AGP"
+    },
+    {
+      "id": "37",
+      "empresa": "NAVITECH S.A.",
+      "direccion_tel": "",
+      "rubro": "TALLERES NAVALES",
+      "expediente": "EX-2019-58769866-APN-MEG#AGP"
+    },
+    {
+      "id": "38",
+      "empresa": "DESLER S.A.",
+      "direccion_tel": "AGUERO 97 C.A.B.A. TEL: 4-867-5115",
+      "rubro": "RETIRO DE RESIDUOS ESPECIALES Y LIMPIEZA DE SENTINAS",
+      "expediente": "EX-2018-64531776-APN-MEG#AGP"
+    },
+    {
+      "id": "39",
+      "empresa": "SOLUCIONES INTEGRADAS PARA EMPRESAS S.R.L. (SIPE)",
+      "direccion_tel": "",
+      "rubro": "TRANSPORTE DE CARGAS GENERAL",
+      "expediente": "EX-2018-39241530-APN-MEG#AGP"
+    },
+    {
+      "id": "40",
+      "empresa": "DON PARDO E HIJOS S.R.L.",
+      "direccion_tel": "",
+      "rubro": "CONTENEDORES IY CARGA GENERAL",
+      "expediente": "EX-2019-64399051-APN-MEG#AGP"
+    },
+    {
+      "id": "41",
+      "empresa": "DEFIBA SERVICIOS PORTUARIOS S.A.",
+      "direccion_tel": "",
+      "rubro": "CARGA Y DESCARGA DE CONTENEDORES",
+      "expediente": "EX-2019-20656532-APN-MEG#AGP"
+    },
+    {
+      "id": "42",
+      "empresa": "JORGE LUIS REBAGLIATI E HIJOS SRL (CINTRA) ",
+      "direccion_tel": " PAREJA 4809 C.A.B.A. TEL: 4-751-4206",
+      "rubro": "SERVICIO DE CONTINGENCIA ANTE DERRAMES DE HIDROCARBUROS, SUSTANCIAS NOCIVAS Y POTENCIALMENTE PELIGROSAS SOBRE ESPEJO DE AGUA, LIMPIEZA DE S\u00d3LIDOS Y SEMISOLIDOS SOBRENADANTES, SLOP Y SENTINA",
+      "expediente": "EX-2019-53301453-APN-MEG#AGP"
+    },
+    {
+      "id": "43",
+      "empresa": "TRANSPORTE JOSE SAAVEDRA",
+      "direccion_tel": "",
+      "rubro": "PROVISION DE COMBUSTIBLE",
+      "expediente": "EX-2019-55442030-APN-MEG#AGP"
+    },
+    {
+      "id": "44",
+      "empresa": "ALEJANDRO HERNAN PANNUNZIO",
+      "direccion_tel": "",
+      "rubro": "TRANSPORTE Y/O PROVISION DE COMBUSTIBLES",
+      "expediente": "EX-2019-45275268-APN-MEG#AGP"
+    },
+    {
+      "id": "45",
+      "empresa": "TRANSPORTE Y DEPOSITOS M.B. MAZZOLA S.A. ",
+      "direccion_tel": "HERRERA 725 C.A.B.A. COD. POSTAL 1295 TEL. 4301-2001",
+      "rubro": "CONTENEDORES Y CARGA GENERAL",
+      "expediente": "EX-2019-51603909-APN-MEG#AGP"
+    },
+    {
+      "id": "46",
+      "empresa": "TRANS BAHIA S.A.",
+      "direccion_tel": "EX RUTA 3 KM 678,5 BAHIA BLANCA (8000) TEL: 0291-4861444",
+      "rubro": "PROVEEDORES DE COMBUSTIBLES Y LUBRICANTES A BUQUE",
+      "expediente": "EX-2019-02097524-APN-MEG#AGP"
+    },
+    {
+      "id": "47",
+      "empresa": "PINTURAS PLATAMAR S.R.L.",
+      "direccion_tel": "",
+      "rubro": "PROVISION DE ALIMENTOS, AGUA U OTROS INSUMOS",
+      "expediente": "EX-2019-53701752-APN-MEG#AGP"
+    },
+    {
+      "id": "48",
+      "empresa": "MURCHISON S.A. ",
+      "direccion_tel": "AV. RAFAEL CASTILLO R. OBLIGADO C.A.B.A. (C1425DAA) TEL: 4-809-9000",
+      "rubro": "CONTENEDORES Y CARGA GENERAL",
+      "expediente": "EX-2018-65258079-APN-MEG#AGP"
+    },
+    {
+      "id": "49",
+      "empresa": "MATAFUEGOS IMPULSO SACIYF",
+      "direccion_tel": "",
+      "rubro": "SERVICIOS PARA EQUIPAMIENTOS DE LUCHA CONTRA INCENDIO",
+      "expediente": "EX-2019-08815287-APN-MEG#AGP"
+    },
+    {
+      "id": "50",
+      "empresa": "LORENTZEN WILLY KOLBJORN (MATAFUEGOS BERGEN) ",
+      "direccion_tel": "",
+      "rubro": "SERVICIOS DE INSPECCION DE EQUIPOS Y SISTEMAS CONTRA INCENDIO",
+      "expediente": "EX-2019-55424430-APN-MEG#AGP"
+    },
+    {
+      "id": "51",
+      "empresa": "I.D.P S.A.",
+      "direccion_tel": "COLOMBRES 2353 MUNRO (1605) TEL: 4-721-0077",
+      "rubro": "PROVISI\u00d3N DE ELEMENTOS PARA LA SEGURIDAD HUMANA",
+      "expediente": "EX-2018-57355318-APN-MEG#AGP"
+    },
+    {
+      "id": "52",
+      "empresa": "ALL ROAD S.A.",
+      "direccion_tel": "OLGA COSSETTINI 1071 PISO 4\u00b0 C.A.B.A. (1107) TEL: 0236-4429763 ",
+      "rubro": "PROVISI\u00d3N DE COMBUSTIBLES Y CARGAS PELIGROSAS A BUQUES",
+      "expediente": "EX-2019-62432437-APN-MEG#AGP"
+    },
+    {
+      "id": "53",
+      "empresa": "NERVI MAR S.R.L.",
+      "direccion_tel": "",
+      "rubro": "PROVISION DE MATERIALES, ARTICULOS DE FERRETERIA, DE LIMPIEZA Y DE SEGURIDAD",
+      "expediente": "EX-2019-76855376-APN-MEG#AGP"
+    },
+    {
+      "id": "54",
+      "empresa": "ABB S.A.",
+      "direccion_tel": "",
+      "rubro": "TALLERES NAVALES",
+      "expediente": "EX-2019-63325310-APN-MEG#AGP"
+    },
+    {
+      "id": "55",
+      "empresa": "EMPRESA DE SALVAMENTO Y BUCEO ALMIRON & CIA SRL ",
+      "direccion_tel": "NECOCHEA 1415 C.A.B.A. (1158) TEL: 4-301-0695",
+      "rubro": "SALVAMENTO Y BUCEO, CONTROL DE DERRAMES DE HIDROCARBUROS, PROVISI\u00d3N DE ALIMENTOS A BUQUES U OTROS INSUMOS ",
+      "expediente": "EX-2018-67531134-APN-MEG#AGP"
+    },
+    {
+      "id": "56",
+      "empresa": "TALLERES NAVALES ARGENTINOS S.A. ",
+      "direccion_tel": "FERRREYRA ANDRES 3983 PISO 5\u00b0 DEP. \u0093F\u0094 C.A.B.A. TEL: 4-201-0515",
+      "rubro": "TALLER DE REPARACIONES NAVALES",
+      "expediente": "EX-2019-12251949-APN-MEG#AGP"
+    },
+    {
+      "id": "57",
+      "empresa": "RANDAZZO CLAUDIO DOMINGO",
+      "direccion_tel": "",
+      "rubro": "TALLERES NAVALES",
+      "expediente": "EX-2019-67025547-APN-MEG#AGP"
+    },
+    {
+      "id": "58",
+      "empresa": "MONTANI EDUARDO OMAR",
+      "direccion_tel": "",
+      "rubro": "PROVISION DE3 COMBUSTIBLE",
+      "expediente": "EX-2019-58841501-APN-MEG#AGP"
+    },
+    {
+      "id": "59",
+      "empresa": "COMPA\u00d1\u00cdA PETROLERA COPSA S.A. ",
+      "direccion_tel": "AV. ROQUE SAENZ PE\u00d1A 846 PISO 5\u00b0 OFIC: 503/506 (1035) TEL: 4-129-3200",
+      "rubro": "PROVISION DE COMBUSTIBLE",
+      "expediente": "EX-2019-78140540-APN-MEG#AGP"
+    },
+    {
+      "id": "60",
+      "empresa": "PEBSA S.A.",
+      "direccion_tel": "",
+      "rubro": "TALLERES NAVALES",
+      "expediente": "EX-2019-55989804-APN-MEG#AGP"
+    },
+    {
+      "id": "61",
+      "empresa": "PROMPT SUPPLIER S.A.",
+      "direccion_tel": "",
+      "rubro": "PROVISION DE ALIMENTOS, AGUA U OTROS INSUMOS",
+      "expediente": "EX-2019-72712618-APN-MEG#AGP"
+    },
+    {
+      "id": "62",
+      "empresa": "NAVAL STAR S.A.",
+      "direccion_tel": "",
+      "rubro": "TALLERES NAVALES",
+      "expediente": "EX-2019-63953686-APN-MEG#AGP"
+    },
+    {
+      "id": "63",
+      "empresa": "BUQUE MOTOR MATE S.R.L.",
+      "direccion_tel": "",
+      "rubro": "LIMPEZA DE ARENA DECANTADA POR SILOS Y BARCOS ARENEROS",
+      "expediente": "EX-2019-06976999-APN-MEG#AGP"
+    },
+    {
+      "id": "64",
+      "empresa": "TECNIMOTORS S.A.",
+      "direccion_tel": "",
+      "rubro": "TALLERES NAVALES",
+      "expediente": "EX-2019-73127504-APN-MEG#AGP"
+    },
+    {
+      "id": "65",
+      "empresa": "NATALICHIO JOSE VICENTE",
+      "direccion_tel": "",
+      "rubro": "TALLERES NAVALES",
+      "expediente": "EX-2019-56047406-APN-MEG#AGP"
+    },
+    {
+      "id": "66",
+      "empresa": "OLIVARI CESAR AUGUSTO ",
+      "direccion_tel": "CORONEL SALVADORES 1247 C.A.B.A. (1167) TEL: 4-301-3919",
+      "rubro": " GRUAS, AUTOELEVADORES Y CARGAS GENERALES",
+      "expediente": "EX-2019-02107749-APN-MEG#AGP"
+    },
+    {
+      "id": "67",
+      "empresa": "CAO HECTOR HUMBERTO",
+      "direccion_tel": "",
+      "rubro": "AMARRADORES",
+      "expediente": "EX-2019-52184902-APN-MEG#AGP"
+    },
+    {
+      "id": "68",
+      "empresa": "DISTRIBUIDORA EL FARO S.A. ",
+      "direccion_tel": "VENEZUELA 110 PISO 1\u00b0 OFIC 14 C.A.B.A. TEL: 4-331-1815",
+      "rubro": "PROVISI\u00d3N DE COMBUSTIBLE A BUQUES",
+      "expediente": "EX-2018-27215737-APN-MEG#AGP"
+    },
+    {
+      "id": "69",
+      "empresa": "TRANSPORTE ALBERTO FRANSCISCO GARAY ",
+      "direccion_tel": "PTE. PERON 2176 BANFIEL (1828) TEL: 4-285-6502",
+      "rubro": "TRASVASE DE COMBUSTIBLE DE CAMION A BUQUE",
+      "expediente": "EX-2019-21152444-APN-MEG#AGP"
+    },
+    {
+      "id": "70",
+      "empresa": "CROMWELL Y CIA S.A. ",
+      "direccion_tel": "CALIFORNIA 733 C.A.B.A. (1168) TEL: 4-301-4124",
+      "rubro": "TALLER NAVAL",
+      "expediente": "EX-2019-01712268-APN-MEG#AGP"
+    },
+    {
+      "id": "71",
+      "empresa": "CUPRUM PORT SERVICES S.R.L. ",
+      "direccion_tel": "",
+      "rubro": "TRANSPORTE DE RESIDUOS ESPECIALES, NO ESPECIALES Y TRANPORTE DE AGUA",
+      "expediente": "EX-2018-54554098-APN-MEG#AGP"
+    },
+    {
+      "id": "72",
+      "empresa": "SEA SERVICE S.R.L.",
+      "direccion_tel": "",
+      "rubro": "PROVEEDORES MARITIMOS",
+      "expediente": "EX-2018-04422466-APN-MEG#AGP"
+    },
+    {
+      "id": "73",
+      "empresa": "SERVICIOS LA INSUPERABLE S.A.",
+      "direccion_tel": "",
+      "rubro": "OPERACI\u00d3N DE LIMPIEZA DE RESIUDOS OLEOSOS DE SENTINA, SLOP, BARROS AGUAS SUCIAS , VIDA DIARIA",
+      "expediente": "EX-2019-05303399-APN-MEG#AGP"
+    },
+    {
+      "id": "74",
+      "empresa": "TANGO SUPPLIER S.R.L.",
+      "direccion_tel": "",
+      "rubro": "REPARACION NAVAL",
+      "expediente": "EX-2018-53881072-APN-MEG#AGP"
+    }
+  ]
+}

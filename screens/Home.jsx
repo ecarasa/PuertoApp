@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 
 import { ListItem, Icon } from "react-native-elements";
 import routes from "../navigation/routes";
@@ -56,7 +56,9 @@ const Home = ({ navigation }) => {
             >
               <Icon name={icon.name} type={icon.type} />
               <ListItem.Content>
-                <ListItem.Title>{title}</ListItem.Title>
+                <ListItem.Title style={styles.listItemTitle}>
+                  {title}
+                </ListItem.Title>
               </ListItem.Content>
               <ListItem.Chevron />
             </ListItem>
@@ -66,11 +68,11 @@ const Home = ({ navigation }) => {
       <View style={styles.midContainer}>
         <View>
           <Icon name="qrcode" type="material-community" size={52} />
-          <Text>Escanear credencial</Text>
+          <Text style={styles.gothamBookFont}>Escanear credencial</Text>
         </View>
         <View>
           <Icon name="camera" type="material-community" size={52} />
-          <Text>Capturar credencial</Text>
+          <Text style={styles.gothamBookFont}>Capturar credencial</Text>
         </View>
       </View>
     </View>
@@ -84,6 +86,9 @@ const styles = StyleSheet.create({
   listItemContainer: {
     padding: "3%",
   },
+  listItemTitle: {
+    fontFamily: "GothamBook",
+  },
   screensContainer: {
     flex: 0,
   },
@@ -92,6 +97,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
+  },
+  gothamBookFont: {
+    fontFamily: "GothamBook",
   },
 });
 

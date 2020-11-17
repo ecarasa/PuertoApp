@@ -44,9 +44,13 @@ const MainStack = () => {
       <Stack.Navigator
         initialRouteName={routes.HOME}
         screenOptions={{
-          cardStyle: { backgroundColor: 'white' },
-          cardStyleInterpolator:
-            CardStyleInterpolators.forHorizontalIOS,
+          headerTitleStyle: {
+            fontFamily: "GothamBold",
+            fontSize: 15,
+          },
+          headerTitleAlign: "center",
+          cardStyle: { backgroundColor: "white" },
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       >
         {screens.map(({ component, title, routeName }) => (

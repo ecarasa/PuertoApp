@@ -1,7 +1,7 @@
 import React from "react";
 import { View, ActivityIndicator } from "react-native";
 
-const WebViewLoading = () => {
+const LoadingView = () => {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <ActivityIndicator size="large" color="#999999" />
@@ -9,4 +9,4 @@ const WebViewLoading = () => {
   );
 };
 
-export default WebViewLoading;
+export default LoadingView;

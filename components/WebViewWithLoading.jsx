@@ -1,6 +1,6 @@
 import React from "react";
 import WebView from "react-native-webview";
-import WebViewLoading from "./WebViewLoading";
+import LoadingView from "./LoadingView";
 
 const WebViewWithLoading = React.forwardRef((props, ref) => {
   const [isWebViewLoading, setIsWebViewLoading] = React.useState(true);
@@ -10,7 +10,7 @@ const WebViewWithLoading = React.forwardRef((props, ref) => {
       ref={ref}
       style={{ display: isWebViewLoading ? "none" : "flex" }}
       startInLoadingState={true}
-      renderLoading={() => <WebViewLoading />}
+      renderLoading={() => <LoadingView />}
       onLoadEnd={() => setIsWebViewLoading(false)}
       {...props}
     />

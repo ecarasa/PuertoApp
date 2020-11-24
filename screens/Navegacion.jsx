@@ -1,13 +1,23 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import routes from "../navigation/routes";
+import ScreenList from "../components/ScreenList";
 
-const Navegacion = () => {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Navegacion Screen</Text>
-      <Button title="Go to Home" onPress={() => navigation.navigate("Home")} />
-    </View>
-  );
+const menuOptions = [
+  {
+    title: "Marea & Corrientes",
+    routeName: routes.MAREAYCORRIENTES,
+    icon: { name: "ios-help-buoy", type: "ionicon" },
+  },
+  {
+    title: "Pronóstico Clima",
+    routeName: routes.PRONOSTICOCLIMA,
+    icon: { name: "ios-partly-sunny", type: "ionicon" },
+  },
+];
+
+const Navegacion = ({ navigation }) => {
+  return <ScreenList menuOptions={menuOptions} navigation={navigation} />;
 };
+
 
 export default Navegacion;

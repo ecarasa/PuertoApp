@@ -16,10 +16,12 @@ import Twitter from "../screens/Twitter";
 
 import routes from "./routes";
 import WithBuenosAiresFooter from "../components/WithBuenosAiresFooter";
+import MareaYCorrientes from "../screens/MareaYCorrientes";
+import PronosticoClima from "../screens/PronosticoClima";
 
 const Stack = createStackNavigator();
 
-export const screens = [
+export const commonScreens = [
   { component: Buques, title: "Buques", routeName: routes.BUQUES },
   {
     component: ChatDelPuerto,
@@ -38,6 +40,19 @@ export const screens = [
   { component: Twitter, title: "@PuertoBsAs", routeName: routes.TWITTER },
 ];
 
+export const navegacionScreens = [
+  {
+    component: MareaYCorrientes,
+    title: "Marea & Corrientes",
+    routeName: routes.MAREAYCORRIENTES,
+  },
+  {
+    component: PronosticoClima,
+    title: "Pronóstico Clima",
+    routeName: routes.PRONOSTICOCLIMA,
+  },
+];
+
 const MainStack = () => {
   return (
     <WithBuenosAiresFooter>
@@ -53,14 +68,16 @@ const MainStack = () => {
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       >
-        {screens.map(({ component, title, routeName }) => (
-          <Stack.Screen
-            name={routeName}
-            component={component}
-            options={{ title }}
-            key={title}
-          />
-        ))}
+        {[...commonScreens, ...navegacionScreens].map(
+          ({ component, title, routeName }) => (
+            <Stack.Screen
+              name={routeName}
+              component={component}
+              options={{ title }}
+              key={title}
+            />
+          )
+        )}
       </Stack.Navigator>
     </WithBuenosAiresFooter>
   );

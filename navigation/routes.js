@@ -9,6 +9,8 @@ const routes = {
   TWITTER: "Twitter",
   MAREAYCORRIENTES: "MareaYCorrientes",
   PRONOSTICOCLIMA: "PronosticoClima",
+  VEHICULOSHABILITADOS: "VehiculosHabilitados",
+  LINTI: "LINTI",
 };
 
 export default routes;

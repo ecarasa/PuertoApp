@@ -1,13 +1,23 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import routes from "../navigation/routes";
+import ScreenList from "../components/ScreenList";
 
-const FIRCNRT = () => {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>FIRCNRT Screen</Text>
-      <Button title="Go to Home" onPress={() => navigation.navigate("Home")} />
-    </View>
-  );
+const menuOptions = [
+  {
+    title: "Vehículos Habilitados",
+    routeName: routes.VEHICULOSHABILITADOS,
+    icon: { name: "md-bus", type: "ionicon" },
+  },
+  {
+    title: "LINTI",
+    routeName: routes.LINTI,
+    icon: { name: "md-person", type: "ionicon" },
+  },
+];
+
+const FIRCNRT = ({ navigation }) => {
+  return <ScreenList menuOptions={menuOptions} navigation={navigation} />;
 };
+
 
 export default FIRCNRT;

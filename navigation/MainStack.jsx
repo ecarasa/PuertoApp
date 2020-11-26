@@ -18,6 +18,8 @@ import routes from "./routes";
 import WithBuenosAiresFooter from "../components/WithBuenosAiresFooter";
 import MareaYCorrientes from "../screens/MareaYCorrientes";
 import PronosticoClima from "../screens/PronosticoClima";
+import VehiculosHabilitados from "../screens/VehiculosHabilitados";
+import LINTI from "../screens/LINTI";
 
 const Stack = createStackNavigator();
 
@@ -53,6 +55,19 @@ export const navegacionScreens = [
   },
 ];
 
+export const fircnrtScreens = [
+  {
+    component: VehiculosHabilitados,
+    title: "Vehículos Habilitados",
+    routeName: routes.VEHICULOSHABILITADOS,
+  },
+  {
+    component: LINTI,
+    title: "LINTI",
+    routeName: routes.LINTI,
+  },
+];
+
 const MainStack = () => {
   return (
     <WithBuenosAiresFooter>
@@ -68,7 +83,7 @@ const MainStack = () => {
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       >
-        {[...commonScreens, ...navegacionScreens].map(
+        {[...commonScreens, ...navegacionScreens, ...fircnrtScreens].map(
           ({ component, title, routeName }) => (
             <Stack.Screen
               name={routeName}

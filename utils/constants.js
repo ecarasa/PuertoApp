@@ -11,4 +11,8 @@ export const LINTI_URL =
   "https://api.cnrt.gob.ar/ucp/v1/public/estadoChofer?nroDocumento={dni}&sexo={sexo}";
 export const LINTI_MAS_INFO_URL =
   "https://linti.seguridadvial.gob.ar/lintidigital/{dni}";
+export const VEHICULOS_URL =
+  "https://api.cnrt.gob.ar/seop/public/v1/parquesMoviles?dominio={dominio}&pais=1";
+export const VEHICULOS_MAS_INFO_URL =
+  "https://fir.cnrt.gob.ar/vehiculos-habilitados/1/{dominio}";
 export const PER_PAGE_RESULTS_EMPRESAS = 10;

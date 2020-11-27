@@ -60,7 +60,7 @@ const LintiInfo = ({ dni, sexo }) => {
         containerStyle={styles.buttonContainer}
         buttonStyle={styles.buttonSecondary}
         titleStyle={styles.buttonTitle}
-        title="Más información"
+        title="MÁS INFORMACIÓN"
       />
     </View>
   );
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     width: "80%",
-    paddingTop: 20,
+    marginVertical: 10,
   },
   buttonPrimary: {
     backgroundColor: "#0072bb",
@@ -138,7 +138,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   lintiInfoContainer: {
-    paddingTop: 20,
     alignItems: "center",
     width: "100%",
   },

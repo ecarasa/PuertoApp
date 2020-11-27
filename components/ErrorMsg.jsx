@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
   errorMsg: {
     color: "red",
     fontSize: 16,
+    textAlign: "center",
   },
 });
 

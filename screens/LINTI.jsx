@@ -6,9 +6,10 @@ import LoadingView from "../components/LoadingView";
 import useAxiosLazy from "../hooks/useAxiosLazy";
 import { LINTI_URL, LINTI_MAS_INFO_URL } from "../utils/constants";
 import Strong from "../components/Strong";
+import ErrorMsg from "../components/ErrorMsg";
 
 const LintiInfo = ({ dni, sexo }) => {
-  const [getInfo, { data, loading, error, called }] = useAxiosLazy();
+  const [getInfo, { data, loading, error }] = useAxiosLazy();
 
   const handleMoreInfo = () => {
     Linking.openURL(LINTI_MAS_INFO_URL.replace("{dni}", dni));
@@ -20,12 +21,12 @@ const LintiInfo = ({ dni, sexo }) => {
   }, [dni]);
 
   if (dni === undefined) return null;
-  if (!dni) return <Error msg="Ingrese un D.N.I." />;
+  if (!dni) return <ErrorMsg msg="Ingrese un D.N.I." />;
 
   if (loading) return <LoadingView />;
-  if (error) return <Error msg="Error al cargar datos" />;
+  if (error) return <ErrorMsg msg="Error al cargar datos" />;
 
-  if (data && data.message) return <Error msg={data.message} />;
+  if (data && data.message) return <ErrorMsg msg={data.message} />;
 
   return (
     <View style={styles.lintiInfoContainer}>
@@ -61,20 +62,6 @@ const LintiInfo = ({ dni, sexo }) => {
         titleStyle={styles.buttonTitle}
         title="Más información"
       />
-    </View>
-  );
-};
-
-const Error = ({ msg }) => {
-  return (
-    <View>
-      <Icon
-        name="ios-information-circle"
-        color="red"
-        type="ionicon"
-        size={32}
-      />
-      <Text style={styles.errorMsg}>{msg}</Text>
     </View>
   );
 };

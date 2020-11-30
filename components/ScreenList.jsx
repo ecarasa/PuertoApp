@@ -13,7 +13,11 @@ const ScreenList = ({ menuOptions, navigation }) => {
             containerStyle={styles.listItemContainer}
             bottomDivider
           >
-            <Icon name={icon.name} type={icon.type} />
+            <Icon
+              containerStyle={styles.iconContainer}
+              name={icon.name}
+              type={icon.type}
+            />
             <ListItem.Content>
               <ListItem.Title style={styles.listItemTitle}>
                 {title}
@@ -39,6 +43,9 @@ const styles = StyleSheet.create({
   },
   gothamBookFont: {
     fontFamily: "GothamBook",
+  },
+  iconContainer: {
+    width: 30,
   },
 });
 

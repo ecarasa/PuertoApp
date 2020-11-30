@@ -15,4 +15,6 @@ export const VEHICULOS_URL =
   "https://api.cnrt.gob.ar/seop/public/v1/parquesMoviles?dominio={dominio}&pais=1";
 export const VEHICULOS_MAS_INFO_URL =
   "https://fir.cnrt.gob.ar/vehiculos-habilitados/1/{dominio}";
+export const VER_MAPA_URL =
+  "https://www.marinetraffic.com/es/ais/home/centerx:-58.360/centery:-34.600/zoom:13";
 export const PER_PAGE_RESULTS_EMPRESAS = 10;

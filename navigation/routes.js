@@ -11,6 +11,9 @@ const routes = {
   PRONOSTICOCLIMA: "PronosticoClima",
   VEHICULOSHABILITADOS: "VehiculosHabilitados",
   LINTI: "LINTI",
+  MAPAENVIVO: "MapaEnVivo",
+  LISTADODEBUQUES: "ListadoDeBuques",
+  ESTADODEBUQUES: "EstadoDeBuques",
 };
 
 export default routes;

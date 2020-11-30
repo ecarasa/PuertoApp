@@ -20,6 +20,9 @@ import MareaYCorrientes from "../screens/MareaYCorrientes";
 import PronosticoClima from "../screens/PronosticoClima";
 import VehiculosHabilitados from "../screens/VehiculosHabilitados";
 import LINTI from "../screens/LINTI";
+import MapaEnVivo from "../screens/MapaEnVivo";
+import ListadoDeBuques from "../screens/ListadoDeBuques";
+import EstadoDeBuques from "../screens/EstadoDeBuques";
 
 const Stack = createStackNavigator();
 
@@ -68,6 +71,24 @@ export const fircnrtScreens = [
   },
 ];
 
+export const buquesScreens = [
+  {
+    component: MapaEnVivo,
+    title: "Mapa en vivo",
+    routeName: routes.MAPAENVIVO,
+  },
+  {
+    component: ListadoDeBuques,
+    title: "Listado de Buques",
+    routeName: routes.LISTADODEBUQUES,
+  },
+  {
+    component: EstadoDeBuques,
+    title: "Estado de Buques",
+    routeName: routes.ESTADODEBUQUES,
+  },
+];
+
 const MainStack = () => {
   return (
     <WithBuenosAiresFooter>
@@ -83,16 +104,19 @@ const MainStack = () => {
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       >
-        {[...commonScreens, ...navegacionScreens, ...fircnrtScreens].map(
-          ({ component, title, routeName }) => (
-            <Stack.Screen
-              name={routeName}
-              component={component}
-              options={{ title }}
-              key={title}
-            />
-          )
-        )}
+        {[
+          ...commonScreens,
+          ...navegacionScreens,
+          ...fircnrtScreens,
+          ...buquesScreens,
+        ].map(({ component, title, routeName }) => (
+          <Stack.Screen
+            name={routeName}
+            component={component}
+            options={{ title }}
+            key={title}
+          />
+        ))}
       </Stack.Navigator>
     </WithBuenosAiresFooter>
   );

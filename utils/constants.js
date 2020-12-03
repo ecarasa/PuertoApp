@@ -7,6 +7,7 @@ export const PRONOSTICO_URL = "https://clima-agp-test.mybluemix.net";
 export const MAREA_Y_CORRIENTE_URL =
   "https://servicios.puertobuenosaires.gob.ar/ePuertoBue/mareografo/ws-meteo.php";
 export const EMPRESAS_URL = `https://servicios.puertobuenosaires.gob.ar/ePuertobue/empresas/ws-empresas.php?api_key=${env.PUERTO_BS_AS_API_KEY}`;
+export const LISTADO_DE_BUQUES_URL = `https://servicios.puertobuenosaires.gob.ar/ePuertoBue/barlovento/ws/ws-buques.php?q=buqueNombre&api_key=${env.PUERTO_BS_AS_API_KEY}`;
 export const LINTI_URL =
   "https://api.cnrt.gob.ar/ucp/v1/public/estadoChofer?nroDocumento={dni}&sexo={sexo}";
 export const LINTI_MAS_INFO_URL =
@@ -18,3 +19,4 @@ export const VEHICULOS_MAS_INFO_URL =
 export const VER_MAPA_URL =
   "https://www.marinetraffic.com/es/ais/home/centerx:-58.360/centery:-34.600/zoom:13";
 export const PER_PAGE_RESULTS_EMPRESAS = 10;
+export const PER_PAGE_RESULTS_BUQUES = 10;

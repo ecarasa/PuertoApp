@@ -1,12 +1,13 @@
 import React from "react";
-import { View, TextInput, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { Icon } from "react-native-elements";
+import { TextInput } from "react-native-gesture-handler";
 
 const SearchBar = ({ placeholder, onChangeText, value }) => {
   const removeText = React.useCallback(() => {
     onChangeText("");
   }, []);
-
+  
   const icon = (
     <Icon
       name={value ? "close" : "search"}

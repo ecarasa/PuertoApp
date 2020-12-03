@@ -7,18 +7,25 @@ const useAxios = (url) => {
   const [error, setError] = React.useState();
 
   useEffect(() => {
+    let source = axios.CancelToken.source();
     const fetchData = async () => {
       try {
-        const r = await axios.get(url);
+        const r = await axios.get(url, { cancelToken: source.token });
         setData(r.data);
         setLoading(false);
       } catch (error) {
-        console.error(error);
-        setLoading(false);
-        setError(error);
+        if (axios.isCancel(error)) {
+          console.log(error);
+        } else {
+          setLoading(false);
+          setError(error);
+        }
       }
     };
     fetchData();
+    return () => {
+      source.cancel();
+    };
   }, []);
 
   return [data, loading, error];

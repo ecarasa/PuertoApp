@@ -3,26 +3,7 @@ import { View, StyleSheet, Image, Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Icon } from "react-native-elements";
 import Bandera from "../../components/Bandera";
-
-const IMG_SOURCES = [
-  require("../../assets/img/barco1.png"),
-  require("../../assets/img/barco2.png"),
-  require("../../assets/img/barco3.png"),
-  require("../../assets/img/barco4.png"),
-  require("../../assets/img/barco5.png"),
-  require("../../assets/img/barco6.png"),
-  require("../../assets/img/barco7.png"),
-  require("../../assets/img/barco8.png"),
-];
-
-const getBuqueImgSource = (type) => {
-  if (0 <= type && type < 35) {
-    const index = Math.floor(type / 5);
-    return IMG_SOURCES[index];
-  } else {
-    return IMG_SOURCES[7];
-  }
-};
+import { getBuqueImgSource } from "../../utils/getBuqueImgSource";
 
 /*
   {

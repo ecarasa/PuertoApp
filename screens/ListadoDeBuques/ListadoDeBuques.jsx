@@ -22,7 +22,7 @@ const ListadoDeBuques = () => {
   const [data, loading, error] = useAxios(LISTADO_DE_BUQUES_URL);
   const [searchInput, setSearchInput] = React.useState("");
   const [isFilterVisible, setIsFilterVisible] = React.useState(false);
-  const scrollView = React.useRef(null);
+  const flatListRef = React.useRef(null);
 
   const [currentPage, setCurrentPage] = React.useState(0);
   const [totalPages, setTotalPages] = React.useState(0);
@@ -53,7 +53,7 @@ const ListadoDeBuques = () => {
         )
       );
       setCurrentPage(nextPage);
-      scrollView.current.scrollToOffset({ animated: true, offset: 0 });
+      flatListRef.current.scrollToOffset({ animated: true, offset: 0 });
     },
     [filterData]
   );
@@ -85,7 +85,7 @@ const ListadoDeBuques = () => {
       </View>
       {filterDataPage && filterDataPage.length > 0 && (
         <View style={{ flex: 1 }}>
-          <BuquesSection ref={scrollView} buques={filterDataPage} />
+          <BuquesSection ref={flatListRef} buques={filterDataPage} />
           <View style={styles.paginationBar}>
             <PaginationBar
               currentPage={currentPage}

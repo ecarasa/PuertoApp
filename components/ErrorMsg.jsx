@@ -2,9 +2,9 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { Icon } from "react-native-elements";
 
-const ErrorMsg = ({ msg, containerSyle }) => {
+const ErrorMsg = ({ msg, containerStyle }) => {
   return (
-    <View style={containerSyle}>
+    <View style={containerStyle}>
       <Icon
         name="ios-information-circle"
         color="red"

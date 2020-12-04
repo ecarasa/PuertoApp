@@ -19,7 +19,7 @@ export const VEHICULOS_MAS_INFO_URL =
   "https://fir.cnrt.gob.ar/vehiculos-habilitados/1/{dominio}";
 export const VER_MAPA_URL =
   "https://www.marinetraffic.com/es/ais/home/centerx:-58.360/centery:-34.600/zoom:13";
-
+export const BUQUE_INFO_URL = `https://servicios.puertobuenosaires.gob.ar/ePuertoBue/barlovento/ws/ws-buques.php?q=buqueNombre&idBuque={idBuque}&api_key=${env.PUERTO_BS_AS_API_KEY}`;
 export const PER_PAGE_RESULTS_EMPRESAS = 10;
 export const PER_PAGE_RESULTS_BUQUES = 10;
 export const PER_PAGE_RESULTS_ESTADO_BUQUES = 10;

@@ -3,10 +3,13 @@ import { View, StyleSheet, Image, Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Icon } from "react-native-elements";
 import Bandera from "../../components/Bandera";
+import Dash from "react-native-dash";
 import {
   getBuqueImgSource,
   BUQUES_IMG_SOURCES,
 } from "../../utils/getBuqueImgSource";
+import useAxiosLazy from "../../hooks/useAxiosLazy";
+import { BUQUE_INFO_URL } from "../../utils/constants";
 /*
   {
     idBuque: "130",
@@ -23,7 +26,16 @@ import {
 
 const EstadoDeBuqueCard = ({ buque }) => {
   const [open, setOpen] = React.useState(false);
-  const handlePress = React.useCallback(() => setOpen((open) => !open));
+  const [loadBuqueInfo, { data, loading, error, called }] = useAxiosLazy();
+
+  const handlePress = React.useCallback(() => {
+    setOpen((open) => !open);
+    if (!called) {
+      loadBuqueInfo(BUQUE_INFO_URL.replace("{idBuque}", buque.idBuque));
+    }
+  }, [called]);
+
+  const buqueInfo = data?.listBuques[0];
 
   return (
     <TouchableOpacity onPress={handlePress}>
@@ -46,30 +58,34 @@ const EstadoDeBuqueCard = ({ buque }) => {
               {`Número de Giro: ${buque.numero_giro}`}
             </Text>
           </View>
-          {open && (
-            <View
-              style={{
-                borderStyle: "dashed",
-                borderTopWidth: 1,
-                paddingTop: 20,
-                marginTop: 20,
-              }}
-            >
-              <Text
-                style={styles.textItem}
-              >{`Matrícula: ${buque.matricula}`}</Text>
+          {open && buqueInfo && (
+            <View>
+              <Dash
+                dashColor="#DDDDDD"
+                style={{
+                  width: "100%",
+                  height: 1,
+                  marginTop: 10,
+                  marginBottom: 20,
+                }}
+              />
               <Text style={styles.textItem}>
-                {`Calado Construcción: ${buque.calado_construccion}`}
+                {`Matrícula: ${buqueInfo.matricula}`}
               </Text>
-              <Text style={styles.textItem}>{`Eslora: ${buque.eslora}`}</Text>
+              <Text style={styles.textItem}>
+                {`Calado Construcción: ${buqueInfo.calado_construccion}`}
+              </Text>
+              <Text style={styles.textItem}>
+                {`Eslora: ${buqueInfo.eslora}`}
+              </Text>
               <View>
                 <Text style={styles.textItem}>
-                  {`Bandera: ${buque.bandera}`}
+                  {`Bandera: ${buqueInfo.bandera}`}
                 </Text>
-                <Bandera code={buque.bandera} />
+                <Bandera code={buqueInfo.bandera} />
               </View>
               <Text style={styles.textItem}>
-                {`Tipo de Buque: ${buque.tipoBuque_desc}`}
+                {`Tipo de Buque: ${buqueInfo.tipoBuque_desc}`}
               </Text>
             </View>
           )}

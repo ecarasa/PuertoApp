@@ -17,7 +17,7 @@ const LintiInfo = ({ dni, sexo }) => {
 
   React.useEffect(() => {
     if (!dni) return;
-    getInfo(LINTI_URL.replace("{dni}", dni).replace("{sexo}", sexo));
+    return getInfo(LINTI_URL.replace("{dni}", dni).replace("{sexo}", sexo));
   }, [dni]);
 
   if (dni === undefined) return null;

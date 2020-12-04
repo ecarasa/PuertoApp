@@ -8,20 +8,30 @@ const useAxiosLazy = () => {
   const [called, setCalled] = React.useState(false);
 
   const dispatch = React.useCallback((url) => {
+    const source = axios.CancelToken.source();
     const fetchData = async () => {
       try {
-        const r = await axios.get(url);
+        setData(undefined);
+        setLoading(true);
+        setCalled(true);
+        setError(undefined);
+        const r = await axios.get(url, { cancelToken: source.token });
         setData(r.data);
         setLoading(false);
       } catch (error) {
-        console.error(error);
-        setLoading(false);
-        setError(error);
+        if (axios.isCancel(error)) {
+          console.log(error);
+        } else {
+          setLoading(false);
+          setError(error);
+        }
       }
     };
-    setLoading(true);
-    setCalled(true);
+
     fetchData();
+    return () => {
+      source.cancel();
+    };
   }, []);
 
   return [dispatch, { data, loading, error, called }];

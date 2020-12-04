@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 
 const useAxios = (url) => {
@@ -7,7 +7,7 @@ const useAxios = (url) => {
   const [error, setError] = React.useState();
 
   useEffect(() => {
-    let source = axios.CancelToken.source();
+    const source = axios.CancelToken.source();
     const fetchData = async () => {
       try {
         const r = await axios.get(url, { cancelToken: source.token });

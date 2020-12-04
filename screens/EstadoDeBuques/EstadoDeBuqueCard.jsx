@@ -10,6 +10,7 @@ import {
 } from "../../utils/getBuqueImgSource";
 import useAxiosLazy from "../../hooks/useAxiosLazy";
 import { BUQUE_INFO_URL } from "../../utils/constants";
+
 /*
   {
     idBuque: "130",
@@ -26,14 +27,20 @@ import { BUQUE_INFO_URL } from "../../utils/constants";
 
 const EstadoDeBuqueCard = ({ buque }) => {
   const [open, setOpen] = React.useState(false);
-  const [loadBuqueInfo, { data, loading, error, called }] = useAxiosLazy();
+  const [loadBuqueInfo, { data }] = useAxiosLazy();
+  const [loadBuqueInfoFlag, setLoadBuqueInfoFlag] = React.useState(false);
 
   const handlePress = React.useCallback(() => {
     setOpen((open) => !open);
-    if (!called) {
-      loadBuqueInfo(BUQUE_INFO_URL.replace("{idBuque}", buque.idBuque));
+    if (!loadBuqueInfoFlag) {
+      setLoadBuqueInfoFlag(true);
     }
-  }, [called]);
+  }, [loadBuqueInfoFlag]);
+
+  React.useEffect(() => {
+    if (!loadBuqueInfoFlag) return;
+    return loadBuqueInfo(BUQUE_INFO_URL.replace("{idBuque}", buque.idBuque));
+  }, [loadBuqueInfoFlag]);
 
   const buqueInfo = data?.listBuques[0];
 

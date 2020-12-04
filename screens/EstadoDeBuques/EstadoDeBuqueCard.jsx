@@ -96,6 +96,7 @@ const styles = StyleSheet.create({
   },
   imgContainer: {
     flex: 2,
+    alignItems: "center",
   },
   bodyContainer: {
     flex: 8,
@@ -113,7 +114,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   img: {
-    width: "100%",
+    width: 50,
     height: 50,
     resizeMode: "contain",
   },

@@ -22,7 +22,7 @@ const useAxiosLazy = () => {
     setLoading(true);
     setCalled(true);
     fetchData();
-  });
+  }, []);
 
   return [dispatch, { data, loading, error, called }];
 };

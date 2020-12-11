@@ -76,7 +76,7 @@ const LINTI = () => {
   };
 
   return (
-    <ScrollView>
+    <ScrollView keyboardShouldPersistTaps="always">
       <View style={styles.container}>
         <Text style={styles.title}>Consulta de conductores habilitados</Text>
         <TextInput

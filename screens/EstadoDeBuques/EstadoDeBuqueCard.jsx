@@ -4,12 +4,14 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { Icon } from "react-native-elements";
 import Bandera from "../../components/Bandera";
 import Dash from "react-native-dash";
+import LoadingView from "../../components/LoadingView";
 import {
   getBuqueImgSource,
   BUQUES_IMG_SOURCES,
 } from "../../utils/getBuqueImgSource";
 import useAxiosLazy from "../../hooks/useAxiosLazy";
 import { BUQUE_INFO_URL } from "../../utils/constants";
+import ErrorView from "../../components/ErrorView";
 
 /*
   {
@@ -27,7 +29,7 @@ import { BUQUE_INFO_URL } from "../../utils/constants";
 
 const EstadoDeBuqueCard = ({ buque }) => {
   const [open, setOpen] = React.useState(false);
-  const [loadBuqueInfo, { data }] = useAxiosLazy();
+  const [loadBuqueInfo, { data, loading, error }] = useAxiosLazy();
   const [loadBuqueInfoFlag, setLoadBuqueInfoFlag] = React.useState(false);
 
   const handlePress = React.useCallback(() => {
@@ -65,7 +67,7 @@ const EstadoDeBuqueCard = ({ buque }) => {
               {`Número de Giro: ${buque.numero_giro}`}
             </Text>
           </View>
-          {open && buqueInfo && (
+          {open && (
             <View>
               <Dash
                 dashColor="#DDDDDD"
@@ -76,24 +78,32 @@ const EstadoDeBuqueCard = ({ buque }) => {
                   marginBottom: 20,
                 }}
               />
-              <Text style={styles.textItem}>
-                {`Matrícula: ${buqueInfo.matricula}`}
-              </Text>
-              <Text style={styles.textItem}>
-                {`Calado Construcción: ${buqueInfo.calado_construccion}`}
-              </Text>
-              <Text style={styles.textItem}>
-                {`Eslora: ${buqueInfo.eslora}`}
-              </Text>
-              <View>
-                <Text style={styles.textItem}>
-                  {`Bandera: ${buqueInfo.bandera}`}
-                </Text>
-                <Bandera code={buqueInfo.bandera} />
-              </View>
-              <Text style={styles.textItem}>
-                {`Tipo de Buque: ${buqueInfo.tipoBuque_desc}`}
-              </Text>
+              {loading && <LoadingView />}
+              {error && (
+                <Text style={styles.textItem}>{"No hay más información"}</Text>
+              )}
+              {buqueInfo && (
+                <View>
+                  <Text style={styles.textItem}>
+                    {`Matrícula: ${buqueInfo.matricula}`}
+                  </Text>
+                  <Text style={styles.textItem}>
+                    {`Calado Construcción: ${buqueInfo.calado_construccion}`}
+                  </Text>
+                  <Text style={styles.textItem}>
+                    {`Eslora: ${buqueInfo.eslora}`}
+                  </Text>
+                  <View>
+                    <Text style={styles.textItem}>
+                      {`Bandera: ${buqueInfo.bandera}`}
+                    </Text>
+                    <Bandera code={buqueInfo.bandera} />
+                  </View>
+                  <Text style={styles.textItem}>
+                    {`Tipo de Buque: ${buqueInfo.tipoBuque_desc}`}
+                  </Text>
+                </View>
+              )}
             </View>
           )}
         </View>

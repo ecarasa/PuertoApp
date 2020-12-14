@@ -67,7 +67,8 @@ const EstadoDeBuqueCard = ({ buque }) => {
               {`Número de Giro: ${buque.numero_giro}`}
             </Text>
           </View>
-          {open && (
+
+          <View style={{ display: open ? "flex" : "none" }}>
             <View>
               <Dash
                 dashColor="#DDDDDD"
@@ -93,11 +94,14 @@ const EstadoDeBuqueCard = ({ buque }) => {
                   <Text style={styles.textItem}>
                     {`Eslora: ${buqueInfo.eslora}`}
                   </Text>
-                  <View>
+                  <View style={styles.banderaSection}>
                     <Text style={styles.textItem}>
                       {`Bandera: ${buqueInfo.bandera}`}
                     </Text>
-                    <Bandera code={buqueInfo.bandera} />
+                    <Bandera
+                      code={buqueInfo.bandera}
+                      containerStyle={styles.banderaContainer}
+                    />
                   </View>
                   <Text style={styles.textItem}>
                     {`Tipo de Buque: ${buqueInfo.tipoBuque_desc}`}
@@ -105,7 +109,7 @@ const EstadoDeBuqueCard = ({ buque }) => {
                 </View>
               )}
             </View>
-          )}
+          </View>
         </View>
         <View style={styles.closeContainer}>
           <Icon
@@ -155,6 +159,19 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     lineHeight: 20,
     fontSize: 14,
+  },
+  banderaSection: {
+    flexDirection: "row",
+    alignContent: "center",
+  },
+  banderaContainer: {
+    height: 20,
+    width: 26.66,
+    padding: 0,
+    marginLeft: 10,
+    borderWidth: 1,
+    borderColor: "#eeeeee",
+    borderStyle: "solid",
   },
 });
 

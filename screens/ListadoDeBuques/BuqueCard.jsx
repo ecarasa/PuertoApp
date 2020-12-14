@@ -42,26 +42,25 @@ const BuqueCard = ({ buque }) => {
             <Text style={styles.nombre}>{buque.nombre}</Text>
           </View>
 
-          {open && (
-            <View>
-              <Text
-                style={styles.textItem}
-              >{`Matrícula: ${buque.matricula}`}</Text>
-              <Text style={styles.textItem}>
-                {`Calado Construcción: ${buque.calado_construccion}`}
-              </Text>
-              <Text style={styles.textItem}>{`Eslora: ${buque.eslora}`}</Text>
-              <View>
-                <Text style={styles.textItem}>
-                  {`Bandera: ${buque.bandera}`}
-                </Text>
-                <Bandera code={buque.bandera} />
-              </View>
-              <Text style={styles.textItem}>
-                {`Tipo de Buque: ${buque.tipoBuque_desc}`}
-              </Text>
+          <View style={{ display: open ? "flex" : "none" }}>
+            <Text
+              style={styles.textItem}
+            >{`Matrícula: ${buque.matricula}`}</Text>
+            <Text style={styles.textItem}>
+              {`Calado Construcción: ${buque.calado_construccion}`}
+            </Text>
+            <Text style={styles.textItem}>{`Eslora: ${buque.eslora}`}</Text>
+            <View style={styles.banderaSection}>
+              <Text style={styles.textItem}>{`Bandera: ${buque.bandera}`}</Text>
+              <Bandera
+                code={buque.bandera}
+                containerStyle={styles.banderaContainer}
+              />
             </View>
-          )}
+            <Text style={styles.textItem}>
+              {`Tipo de Buque: ${buque.tipoBuque_desc}`}
+            </Text>
+          </View>
         </View>
         <View style={styles.closeContainer}>
           <Icon
@@ -111,6 +110,19 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     lineHeight: 20,
     fontSize: 14,
+  },
+  banderaSection: {
+    flexDirection: "row",
+    alignContent: "center",
+  },
+  banderaContainer: {
+    height: 20,
+    width: 26.66,
+    padding: 0,
+    marginLeft: 10,
+    borderWidth: 1,
+    borderColor: "#eeeeee",
+    borderStyle: "solid",
   },
 });
 

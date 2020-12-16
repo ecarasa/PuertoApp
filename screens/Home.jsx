@@ -3,6 +3,9 @@ import { StyleSheet, View, Text } from "react-native";
 
 import { ListItem, Icon } from "react-native-elements";
 import routes from "../navigation/routes";
+import QRCodeSVG from "../assets/img/qrcode.svg";
+import CameraSVG from "../assets/img/camera.svg";
+import { TouchableOpacity } from "react-native";
 
 const menuOptions = [
   {
@@ -66,14 +69,35 @@ const Home = ({ navigation }) => {
         })}
       </View>
       <View style={styles.midContainer}>
-        <View>
-          <Icon name="qrcode" type="material-community" size={52} />
-          <Text style={styles.gothamBookFont}>Escanear credencial</Text>
-        </View>
-        <View>
-          <Icon name="camera" type="material-community" size={52} />
-          <Text style={styles.gothamBookFont}>Capturar credencial</Text>
-        </View>
+        <TouchableOpacity
+          style={{ width: "25%" }}
+          onPress={() => navigation.navigate(routes.ESCANEARCREDENCIAL)}
+        >
+          <View style={styles.qrcodeSection}>
+            <QRCodeSVG width={50} height={50} />
+            <Text style={styles.qrText}>Escanear credencial</Text>
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => navigation.navigate(routes.TERMINOSYCONDICIONES)}
+        >
+          <View style={styles.terminosSection}>
+            <Text style={styles.terminosText}>
+              {"Ver términos y condiciones"}
+            </Text>
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={{ width: "25%" }}
+          onPress={() => navigation.navigate(routes.CAPTURARCREDENCIAL)}
+        >
+          <View style={styles.cameraSection}>
+            <CameraSVG width={50} height={50} />
+            <Text style={styles.cameraText}>Capturar credencial</Text>
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -100,6 +124,29 @@ const styles = StyleSheet.create({
   },
   gothamBookFont: {
     fontFamily: "GothamBook",
+  },
+  qrcodeSection: {
+    alignItems: "center",
+  },
+  qrText: {
+    color: "#454440",
+    fontSize: 12,
+    textAlign: "center",
+  },
+  cameraSection: {
+    alignItems: "center",
+  },
+  cameraText: {
+    color: "#454440",
+    fontSize: 12,
+    textAlign: "center",
+  },
+  terminosSection: {},
+  terminosText: {
+    textAlign: "center",
+    fontSize: 10,
+    color: "#0094D5",
+    fontFamily: "GothamBold",
   },
 });
 

@@ -14,6 +14,9 @@ const routes = {
   MAPAENVIVO: "MapaEnVivo",
   LISTADODEBUQUES: "ListadoDeBuques",
   ESTADODEBUQUES: "EstadoDeBuques",
+  CAPTURARCREDENCIAL: "CapturarCredencial",
+  ESCANEARCREDENCIAL: "EscanearCredencial",
+  TERMINOSYCONDICIONES: "TerminosYCondiciones",
 };
 
 export default routes;

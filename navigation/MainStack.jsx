@@ -23,6 +23,9 @@ import LINTI from "../screens/LINTI";
 import MapaEnVivo from "../screens/MapaEnVivo";
 import ListadoDeBuques from "../screens/ListadoDeBuques";
 import EstadoDeBuques from "../screens/EstadoDeBuques";
+import CapturarCredencial from "../screens/CapturarCredencial";
+import EscanearCredencial from "../screens/EscanearCredencial";
+import TerminosYCondiciones from "../screens/TerminosYCondiciones";
 
 const Stack = createStackNavigator();
 
@@ -43,6 +46,21 @@ export const commonScreens = [
   { component: Navegacion, title: "Navegación", routeName: routes.NAVEGACION },
   { component: Reclamos, title: "Reclamos", routeName: routes.RECLAMOS },
   { component: Twitter, title: "@PuertoBsAs", routeName: routes.TWITTER },
+  {
+    component: CapturarCredencial,
+    title: "Capturar Credencial",
+    routeName: routes.CAPTURARCREDENCIAL,
+  },
+  {
+    component: EscanearCredencial,
+    title: "Escanear Credencial",
+    routeName: routes.ESCANEARCREDENCIAL,
+  },
+  {
+    component: TerminosYCondiciones,
+    title: "Términos y condiciones",
+    routeName: routes.TERMINOSYCONDICIONES,
+  },
 ];
 
 export const navegacionScreens = [

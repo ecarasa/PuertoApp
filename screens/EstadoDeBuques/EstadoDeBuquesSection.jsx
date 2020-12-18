@@ -5,7 +5,7 @@ import EstadoDeBuqueCard from "./EstadoDeBuqueCard";
 const EstadoDeBuquesSection = React.forwardRef(({ buques }, ref) => {
   const renderItem = ({ item }) => <EstadoDeBuqueCard buque={item} />;
 
-  const keyExtractor = React.useCallback((item) => item.numero_giro, []);
+  const keyExtractor = React.useCallback((item, index) => index, []);
 
   return (
     <FlatList

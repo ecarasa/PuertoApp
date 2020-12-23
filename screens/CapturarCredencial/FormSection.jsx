@@ -9,17 +9,33 @@ import {
 } from "react-native";
 import { Button } from "react-native-elements";
 import Rating from "../../components/Rating";
+import SubmittingDataSection from "./SubmittingDataSection";
+
 
 const FormSection = ({ photo }) => {
   const [nombreYApellido, setNombreYApellido] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [observaciones, setObservaciones] = React.useState("");
+  const [rating, setRating] = React.useState(3);
 
+  const [submitted, setSubmitted] = React.useState(false);
   const submitEnabled = nombreYApellido && email;
 
   const handleSubmit = () => {
-    console.log("handleSubmit");
+    setSubmitted(true);
   };
+
+  if (submitted) {
+    return (
+      <SubmittingDataSection
+        nombreYApellido={nombreYApellido}
+        email={email}
+        observaciones={observaciones}
+        rating={rating}
+        photo={photo}
+      />
+    );
+  }
 
   return (
     <ScrollView style={{ padding: 10 }}>
@@ -55,6 +71,8 @@ const FormSection = ({ photo }) => {
           <Text style={styles.label}>{"Dejanos tu opinión"}</Text>
           <Rating
             labels={["Malo", "Regular", "Bueno", "Muy Bueno", "Excelente"]}
+            rating={rating}
+            onChangeRating={setRating}
           />
         </View>
         <View style={styles.formEntry}>

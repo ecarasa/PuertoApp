@@ -3,25 +3,23 @@ import { TouchableOpacity } from "react-native";
 import { View, StyleSheet, Text } from "react-native";
 import { Icon } from "react-native-elements";
 
-const Star = ({ label, enabled, size = 35, onClick }) => {
+const Star = ({ containerStyle, label, enabled, size = 35, onClick }) => {
   return (
-    <TouchableOpacity onPress={onClick}>
+    <TouchableOpacity onPress={onClick} style={containerStyle}>
       <Icon
         name={enabled ? "ios-star" : "ios-star-outline"}
         color="#FFCC00"
         type="ionicon"
         size={size}
       />
-      <Text style={{ fontFamily: "GothamBook", paddingVertical: 10 }}>
+      <Text style={{ fontFamily: "GothamBook", paddingVertical: 10, textAlign: "center", fontSize: 12 }}>
         {label}
       </Text>
     </TouchableOpacity>
   );
 };
 
-const Rating = ({ containerStyle, labels }) => {
-  const [currentRating, setCurrentRating] = React.useState(-1);
-
+const Rating = ({ containerStyle, labels, rating, onChangeRating}) => {
   return (
     <View style={containerStyle}>
       <View style={styles.ratingContainer}>
@@ -29,9 +27,10 @@ const Rating = ({ containerStyle, labels }) => {
           return (
             <Star
               key={index}
-              enabled={index + 1 <= currentRating}
+              enabled={index + 1 <= rating}
               label={label}
-              onClick={() => setCurrentRating(index + 1)}
+              onClick={() => onChangeRating(index+1)}
+              containerStyle={{  width: "20%"  }}
             />
           );
         })}

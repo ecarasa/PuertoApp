@@ -32,7 +32,8 @@
     "react-native-web": "~0.13.12",
     "react-native-webview": "10.7.0",
     "expo-barcode-scanner": "~9.0.0",
-    "expo-camera": "~9.0.0"
+    "expo-camera": "~9.0.0",
+    "expo-image-manipulator": "~8.3.0"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"

@@ -18,10 +18,9 @@ const Camera = ({ onCapturedImage }) => {
   }, []);
 
   const handleCamera = async () => {
-    console.log("handleCamera");
-
     if (camera) {
       let photo = await camera.current.takePictureAsync({
+        exif: false,
         skipProcessing: true,
       });
       onCapturedImage(photo);

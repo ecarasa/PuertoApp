@@ -6,13 +6,16 @@ import LoadingView from "../../components/LoadingView";
 import ErrorView from "../../components/ErrorView";
 import { TextInput } from "react-native";
 import Rating from "../../components/Rating";
+import SubmittingDataSection from "./SubmittingDataSection";
 
 const CredencialInfo = ({ url }) => {
   const [data, loading, error] = useAxios(url);
   const [nombreYApellido, setNombreYApellido] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [observaciones, setObservaciones] = React.useState("");
+  const [rating, setRating] = React.useState(3);
 
+  const [submitted, setSubmitted] = React.useState(false);
   const submitEnabled = nombreYApellido && email;
 
   const handleAfipClick = React.useCallback(() => {
@@ -21,11 +24,25 @@ const CredencialInfo = ({ url }) => {
     }
   }, []);
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    setSubmitted(true);
+  };
 
   if (loading) return <LoadingView />;
   if (error)
     return <ErrorView msg="Error al cargar información de la credencial" />;
+
+  if (submitted) {
+    return (
+      <SubmittingDataSection
+        nombreYApellido={nombreYApellido}
+        email={email}
+        observaciones={observaciones}
+        rating={rating}
+        credencial={data?.credencial}
+      />
+    );
+  }
 
   return (
     <ScrollView style={{ padding: 10 }}>
@@ -88,6 +105,8 @@ const CredencialInfo = ({ url }) => {
           <Text style={styles.label}>{"Dejanos tu opinión"}</Text>
           <Rating
             labels={["Malo", "Regular", "Bueno", "Muy Bueno", "Excelente"]}
+            rating={rating}
+            onChangeRating={setRating}
           />
         </View>
         <View style={styles.formEntry}>

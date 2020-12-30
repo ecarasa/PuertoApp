@@ -13,9 +13,9 @@ const PageListTemplate = ({
   data,
   perPageResults,
   showFilter = false,
-  filterOptions,
-  filterSelectedOptions,
-  filterOnSelectedOption,
+  filterEntries,
+  selectedFilterEntries,
+  onSelectedFilterEntriesChange,
 }) => {
   const [searchInput, setSearchInput] = React.useState("");
   const [isFilterVisible, setIsFilterVisible] = React.useState(false);
@@ -97,9 +97,9 @@ const PageListTemplate = ({
         <FilterModal
           isVisible={isFilterVisible}
           onClose={handleClose}
-          options={filterOptions}
-          selectedOptions={filterSelectedOptions}
-          onSelectedOption={filterOnSelectedOption}
+          filterEntries={filterEntries}
+          selectedFilterEntries={selectedFilterEntries}
+          onSelectedFilterEntriesChange={onSelectedFilterEntriesChange}
         />
       )}
     </View>

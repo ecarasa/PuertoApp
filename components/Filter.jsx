@@ -18,9 +18,30 @@ renderOption: (filterId,filterLabel, option) => {
 selectedOptions: [
   {label: "Rubro", id:"rubro", options: [{id: "bandera1", label: "Bandera1"}]}
 ]
-
+-...
 */
-const Filter = ({ label, options, selectedOptions, onSelectedOption }) => {
+/* 
+const filterEntry = {
+  id: "rubro",
+  label: "Rubro",
+  options: [
+    { id: "rubro1", label: "Rubro1" },
+    { id: "rubro2", label: "Rubro2" },
+  ],
+};
+
+const _selectedFilterEntry = {
+  id: "rubro",
+  options: [{ id: "rubro1", label: "Rubro1" }],
+};
+ */
+const Filter = ({ filterEntry, selectedFilterEntry, onFilterEntryChange }) => {
+  const label = filterEntry.label;
+  const options = filterEntry.options;
+  const selectedOptions = selectedFilterEntry.options;
+  const onSelectedOption = (...args) => {
+    console.log(args);
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>

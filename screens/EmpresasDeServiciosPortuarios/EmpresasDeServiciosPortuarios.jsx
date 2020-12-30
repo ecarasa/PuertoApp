@@ -20,13 +20,32 @@ const EmpresasDeServiciosPortuarios = () => {
     <EmpresasSection ref={ref} empresas={filterDataPage} />
   ));
 
-  const options = [
-    { id: "rubro1", label: "Rubro1" },
-    { id: "rubro2", label: "Rubro2" },
+  const filterEntries = [
+    {
+      id: "rubro",
+      label: "Rubro",
+      options: [
+        { id: "rubro1", label: "Rubro1" },
+        { id: "rubro2", label: "Rubro2" },
+      ],
+    },
   ];
-  const [selectedOptions, setSelectedOptions] = React.useState(["rubro1"]);
 
-  const onSelectedOption = (id) => {
+  const _selectedFilterEntries = [
+    {
+      id: "rubro",
+      label: "Rubro",
+      options: [
+        { id: "rubro1", label: "Rubro1" },
+      ],
+    },
+  ]
+
+  const [selectedFilterEntries, setSelectedFilterEntries] = React.useState(_selectedFilterEntries);
+
+  const onSelectedFilterEntriesChange = (newSelectedFilterEntries) => {
+    setSelectedFilterEntries(newSelectedFilterEntries);
+    return;
     console.log("onSelectedOption Empresas");
     const filterArray = selectedOptions.filter((optionId) => optionId !== id);
 
@@ -47,9 +66,9 @@ const EmpresasDeServiciosPortuarios = () => {
       perPageResults={PER_PAGE_RESULTS_EMPRESAS}
       listSectionRender={listSectionRender}
       showFilter={true}
-      filterOptions={options}
-      filterSelectedOptions={selectedOptions}
-      filterOnSelectedOption={onSelectedOption}
+      filterEntries={filterEntries}
+      selectedFilterEntries={selectedFilterEntries}
+      onSelectedFilterEntriesChange={onSelectedFilterEntriesChange}
     />
   );
 };

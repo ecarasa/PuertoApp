@@ -20,6 +20,23 @@ const EmpresasDeServiciosPortuarios = () => {
     <EmpresasSection ref={ref} empresas={filterDataPage} />
   ));
 
+  const options = [
+    { id: "rubro1", label: "Rubro1" },
+    { id: "rubro2", label: "Rubro2" },
+  ];
+  const [selectedOptions, setSelectedOptions] = React.useState(["rubro1"]);
+
+  const onSelectedOption = (id) => {
+    console.log("onSelectedOption Empresas");
+    const filterArray = selectedOptions.filter((optionId) => optionId !== id);
+
+    if (filterArray.length === selectedOptions.length) {
+      filterArray.push(id);
+    }
+
+    setSelectedOptions(filterArray);
+  };
+
   if (loading) return <LoadingView />;
   if (error) return <ErrorView msg="Error al cargar datos" />;
 
@@ -29,6 +46,10 @@ const EmpresasDeServiciosPortuarios = () => {
       filterByText={filterByText}
       perPageResults={PER_PAGE_RESULTS_EMPRESAS}
       listSectionRender={listSectionRender}
+      showFilter={true}
+      filterOptions={options}
+      filterSelectedOptions={selectedOptions}
+      filterOnSelectedOption={onSelectedOption}
     />
   );
 };

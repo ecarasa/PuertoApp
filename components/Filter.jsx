@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, StyleSheet, FlatList } from "react-native";
 import { Icon } from "react-native-elements";
 import { ScrollView, TextInput } from "react-native-gesture-handler";
-import SearchablePicker from "../../components/SearchablePicker";
+import SearchablePicker from "./SearchablePicker";
 
 /*
 

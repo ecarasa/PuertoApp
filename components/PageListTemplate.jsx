@@ -3,6 +3,7 @@ import { View, StyleSheet, Text } from "react-native";
 import { Icon } from "react-native-elements";
 import SearchBar from "./SearchBar";
 import PaginationBar from "./PaginationBar";
+import FilterModal from "./FilterModal";
 
 const PageListTemplate = ({
   filterByText,
@@ -11,6 +12,10 @@ const PageListTemplate = ({
   noResultsMessage = "No se encontraron resultados",
   data,
   perPageResults,
+  showFilter = false,
+  filterOptions,
+  filterSelectedOptions,
+  filterOnSelectedOption,
 }) => {
   const [searchInput, setSearchInput] = React.useState("");
   const [isFilterVisible, setIsFilterVisible] = React.useState(false);
@@ -53,6 +58,10 @@ const PageListTemplate = ({
     []
   );
 
+  const handleClose = () => {
+    setIsFilterVisible(false);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -64,7 +73,9 @@ const PageListTemplate = ({
           />
         </View>
         <View style={styles.filterIconContainer}>
-          <Icon name="filter-list" type="material" onPress={toggleFilter} />
+          {showFilter && (
+            <Icon name="filter-list" type="material" onPress={toggleFilter} />
+          )}
         </View>
       </View>
       {filterDataPage && filterDataPage.length > 0 && (
@@ -81,6 +92,15 @@ const PageListTemplate = ({
       )}
       {filterDataPage && filterDataPage.length === 0 && (
         <Text style={styles.noResults}>{noResultsMessage}</Text>
+      )}
+      {showFilter && (
+        <FilterModal
+          isVisible={isFilterVisible}
+          onClose={handleClose}
+          options={filterOptions}
+          selectedOptions={filterSelectedOptions}
+          onSelectedOption={filterOnSelectedOption}
+        />
       )}
     </View>
   );

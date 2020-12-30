@@ -22,8 +22,8 @@ export const VER_MAPA_URL =
 export const BUQUE_INFO_URL = `https://servicios.puertobuenosaires.gob.ar/ePuertoBue/barlovento/ws/ws-buques.php?q=buqueNombre&idBuque={idBuque}&api_key=${env.PUERTO_BS_AS_API_KEY}`;
 export const PHOTO_UPLOAD_URL =
   "https://servicios.puertobuenosaires.gob.ar/ePuertoBue/credenciales/photo.php";
-export const DATOS_TRAMITES_URL = "https://servicios.puertobuenosaires.gob.ar/ePuertoBue/credenciales/datosTramite.php";
-//export const DATOS_TRAMITES_URL= "http://192.168.100.159:9999";
+export const DATOS_TRAMITES_URL =
+  "https://servicios.puertobuenosaires.gob.ar/ePuertoBue/credenciales/datosTramite.php";
 export const PER_PAGE_RESULTS_EMPRESAS = 10;
 export const PER_PAGE_RESULTS_BUQUES = 10;
 export const PER_PAGE_RESULTS_ESTADO_BUQUES = 10;

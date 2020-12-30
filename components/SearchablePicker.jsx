@@ -5,25 +5,32 @@ import {
   View,
   StyleSheet,
   Text,
-  TextInput,
   ScrollView,
+  TextInput,
+  TouchableHighlight,
   TouchableOpacity,
+  TouchableWithoutFeedback,
 } from "react-native";
 
 import CheckBox from "./CheckBox";
 
 const DropdownItem = ({ id, label, icon, selected, onSelectedOption }) => {
   return (
-    <TouchableOpacity
+    <TouchableHighlight
       style={styles.dropdownItemContainer}
-      onPress={onSelectedOption}
+      onPress={() => {
+        console.log("onPress");
+        onSelectedOption();
+      }}
     >
-      <CheckBox value={selected} />
-      <View style={styles.dropdownItemContent}>
-        <Text>{label}</Text>
-        {icon ? icon() : null}
+      <View style={{ flex: 1, flexDirection: "row" }}>
+        <CheckBox value={selected} onValueChange={onSelectedOption} />
+        <View style={styles.dropdownItemContent}>
+          <Text>{label}</Text>
+          {icon ? icon() : null}
+        </View>
       </View>
-    </TouchableOpacity>
+    </TouchableHighlight>
   );
 };
 
@@ -72,7 +79,6 @@ const SearchablePicker = ({
           style={styles.textInput}
           placeholder={placeholder}
           onFocus={() => setDropdownVisible(true)}
-          onBlur={() => setDropdownVisible(false)}
         />
       </View>
 
@@ -121,9 +127,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
-
-
-
   textInput: {
     borderWidth: 1,
     borderColor: "#DEE2E6",
@@ -154,7 +157,7 @@ const styles = StyleSheet.create({
 
 SearchablePicker.defaultProps = {
   dropdownMaxHeight: 150,
-  zIndex: 5000,
+  zIndex: 9999,
 };
 
 export default SearchablePicker;
